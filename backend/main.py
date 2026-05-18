@@ -272,7 +272,8 @@ def root():
     # ── GEMINI REPORT GENERATION ──────────────────────────────────────────────
 import google.genai as genai
 
-GEMINI_API_KEY = "AIzaSyCEkdxtnoSXnhhFPlcjjUa4xNYekTFt-BU"  # paste your key
+import os
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")  # paste your key
 
 
 class ReportRequest(BaseModel):
